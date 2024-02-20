@@ -355,6 +355,7 @@
 "Assets/Experiment/Script/CameraGlide.cs"
 "Assets/Experiment/Script/CrabMovement.cs"
 "Assets/Experiment/Script/SideMovement.cs"
+"Assets/Script/TempScript.cs"
 -langversion:9.0
 
 /deterministic
