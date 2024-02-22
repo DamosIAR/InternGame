@@ -354,7 +354,11 @@
 -analyzer:"D:/Unity/2022.3.16f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Experiment/Script/CameraGlide.cs"
 "Assets/Experiment/Script/CrabMovement.cs"
+"Assets/Experiment/Script/CrabSpawner.cs"
+"Assets/Experiment/Script/ScoreGenerator.cs"
+"Assets/Experiment/Script/ScoreManager.cs"
 "Assets/Experiment/Script/SideMovement.cs"
+"Assets/Experiment/Script/Timer.cs"
 "Assets/Script/TempScript.cs"
 -langversion:9.0
 
