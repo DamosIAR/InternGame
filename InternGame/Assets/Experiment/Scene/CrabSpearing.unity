@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 2447348663465409300, guid: 2fa36ee79ffa5ff489681df9fa48bf31, type: 3}
-  spawnAreaCenter: {x: -40.5, y: 2.89671, z: 34.9}
+  spawnAreaCenter: {x: -40.5, y: 2.89671, z: 63.3}
   spawnAreaSize: {x: -11.4, y: 2.89671, z: 46.8}
   spawnInterval: 2
   crabLifetime: 10
@@ -587,6 +587,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eba5a86d336fd942afce462ccf9e64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &555050624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 555050626}
+  - component: {fileID: 555050625}
+  - component: {fileID: 555050627}
+  m_Layer: 0
+  m_Name: SpearSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &555050625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555050624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a63324d7e975d49bf9910d564e5c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1380690077}
+  spear: {fileID: 4843768013853926421, guid: a415c2e87f49fc442912440ccf6b9a45, type: 3}
+  spearLifetime: 2
+--- !u!4 &555050626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555050624}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.180224, y: 36.438576, z: 52.34897}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &555050627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555050624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468720f2e58411e438e5fecadda1e388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1857028052}
+  gameOverPanel: {fileID: 1439378417}
+  scoreToReach: 2
+  score: 0
 --- !u!1 &782324363
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +714,56 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1080459822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080459824}
+  - component: {fileID: 1080459823}
+  m_Layer: 0
+  m_Name: CrabSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1080459823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080459822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a210e8804e996d643b5617ba107b72e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 2447348663465409300, guid: 2fa36ee79ffa5ff489681df9fa48bf31, type: 3}
+  spawnAreaCenter: {x: -40.5, y: 2.89671, z: 6.22}
+  spawnAreaSize: {x: -11.4, y: 2.89671, z: 46.8}
+  spawnInterval: 2
+  crabLifetime: 10
+  speed: 10
+--- !u!4 &1080459824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080459822}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -48.3, y: 2.8967104, z: 36.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -865,7 +979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40adba57570114742a7444fff3d87ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
+  moveSpeed: 6.8
 --- !u!1 &1439378417
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +992,7 @@ GameObject:
   - component: {fileID: 1439378419}
   - component: {fileID: 1439378418}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: GameOverPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1482,3 +1596,5 @@ SceneRoots:
   - {fileID: 1518509559}
   - {fileID: 365535523}
   - {fileID: 211382318}
+  - {fileID: 1080459824}
+  - {fileID: 555050626}

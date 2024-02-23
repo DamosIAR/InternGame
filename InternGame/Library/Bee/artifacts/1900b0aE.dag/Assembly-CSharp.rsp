@@ -359,6 +359,8 @@
 "Assets/Experiment/Script/ScoreGenerator.cs"
 "Assets/Experiment/Script/ScoreManager.cs"
 "Assets/Experiment/Script/SideMovement.cs"
+"Assets/Experiment/Script/Spear.cs"
+"Assets/Experiment/Script/SpearSpawner.cs"
 "Assets/Experiment/Script/Timer.cs"
 "Assets/Script/TempScript.cs"
 -langversion:9.0

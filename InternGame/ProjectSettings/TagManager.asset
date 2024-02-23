@@ -6,6 +6,8 @@ TagManager:
   tags:
   - DestroyBarrier
   - Object
+  - Spear
+  - Storage
   layers:
   - Default
   - TransparentFX

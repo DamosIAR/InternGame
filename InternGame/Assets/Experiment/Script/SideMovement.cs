@@ -25,10 +25,10 @@ public class SideMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //if (collision.gameObject.tag == "DestroyBarrier")
-        //{
-            //scoring.updateScore();
+        /*if (collision.gameObject.tag == "DestroyBarrier")
+        {
+            scoring.updateScore();
             //Destroy(GameObject);
-        //}
+        }*/
     }
 }
