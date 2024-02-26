@@ -8,6 +8,7 @@ TagManager:
   - Object
   - Spear
   - Storage
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -20,16 +20,16 @@ public class Timer : MonoBehaviour
     {
         if (timerTime < maxTime)
         {
-            timerTime += Time.deltaTime;
+            maxTime -= Time.deltaTime;
         }
         else if (timerTime >= maxTime)
         {
             finishPanel.gameObject.SetActive(true);
-            timerTime = maxTime;
+            maxTime = timerTime;
         }
         
-        int minutes = (int)timerTime / 60;
-        int seconds = (int)timerTime % 60;
+        int minutes = (int)maxTime / 60;
+        int seconds = (int)maxTime % 60;
         timerText.text = string.Format("{00:00} : {01:00}", minutes, seconds);
     }
 }

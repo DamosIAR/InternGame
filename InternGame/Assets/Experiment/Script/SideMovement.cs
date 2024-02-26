@@ -11,7 +11,7 @@ public class SideMovement : MonoBehaviour
 
     private void Start()
     {
-        scoring = GameObject.FindGameObjectWithTag("DestroyBarrier").GetComponent<ScoreManager>();
+        //scoring = GameObject.FindGameObjectWithTag("DestroyBarrier").GetComponent<ScoreManager>();
         gameObject.SetActive(true);
     }
     // Update is called once per frame
@@ -25,10 +25,10 @@ public class SideMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        /*if (collision.gameObject.tag == "DestroyBarrier")
+        if (collision.gameObject.tag == "DestroyBarrier")
         {
-            scoring.updateScore();
+            //scoring.updateScore();
             //Destroy(GameObject);
-        }*/
+        }
     }
 }

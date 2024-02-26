@@ -18,23 +18,17 @@ public class ScoreManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void updateScore()
     {
-        Debug.Log("kena");
+        Debug.Log("score bertambah");
         score += 1;
         scoreText.text = "" + score;
 
-        if(score >= scoreToReach)
+        /*if(score >= scoreToReach)
         {
             gameOverPanel.SetActive(true);
 
-        }
+        }*/
 
     }
 }
