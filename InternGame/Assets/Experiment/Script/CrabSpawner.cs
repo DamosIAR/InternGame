@@ -22,7 +22,7 @@ public class CrabSpawner : MonoBehaviour
     void Update()
     {
         spawnAreaCenter = new Vector3 (spawnAreaCenter.x, spawnAreaCenter.y, spawnAreaCenter.z);
-        spawnAreaCenter.z += 0.05f;
+        spawnAreaCenter.z += speed;
         //transform.position = (spawnAreaCenter * speed);
 
         // Perbarui waktu sejak spawn terakhir

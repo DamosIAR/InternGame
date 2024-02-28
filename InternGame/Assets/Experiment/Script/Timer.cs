@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class Timer : MonoBehaviour
         {
             finishPanel.gameObject.SetActive(true);
             maxTime = timerTime;
+            
         }
         
         int minutes = (int)maxTime / 60;

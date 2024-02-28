@@ -357,6 +357,7 @@
 "Assets/Experiment/Script/CameraGlide.cs"
 "Assets/Experiment/Script/CrabMovement.cs"
 "Assets/Experiment/Script/CrabSpawner.cs"
+"Assets/Experiment/Script/SceneManager.cs"
 "Assets/Experiment/Script/ScoreGenerator.cs"
 "Assets/Experiment/Script/ScoreManager.cs"
 "Assets/Experiment/Script/SideMovement.cs"

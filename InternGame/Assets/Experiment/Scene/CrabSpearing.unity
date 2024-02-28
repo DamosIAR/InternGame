@@ -157,7 +157,7 @@ MonoBehaviour:
   spawnAreaSize: {x: -11.4, y: 2.89671, z: 46.8}
   spawnInterval: 2
   crabLifetime: 10
-  speed: 10
+  speed: 0.05
 --- !u!4 &211382318
 Transform:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ Transform:
   m_GameObject: {fileID: 211382316}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.3, y: 2.8967104, z: 36.5}
+  m_LocalPosition: {x: -48.3, y: 2.8967104, z: 63.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1615543415}
-  maxTime: 300
+  maxTime: 5
   finishPanel: {fileID: 1439378417}
 --- !u!114 &220381265
 MonoBehaviour:
@@ -749,11 +749,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 2447348663465409300, guid: 2fa36ee79ffa5ff489681df9fa48bf31, type: 3}
-  spawnAreaCenter: {x: -40.5, y: 2.89671, z: 6.22}
+  spawnAreaCenter: {x: -40.5, y: 2.89671, z: 8.37}
   spawnAreaSize: {x: -11.4, y: 2.89671, z: 46.8}
   spawnInterval: 2
   crabLifetime: 10
-  speed: 10
+  speed: 0.05
 --- !u!4 &1080459824
 Transform:
   m_ObjectHideFlags: 0
@@ -763,7 +763,57 @@ Transform:
   m_GameObject: {fileID: 1080459822}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.3, y: 2.8967104, z: 36.5}
+  m_LocalPosition: {x: -48.3, y: 2.8967104, z: 8.37}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1181850952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1181850954}
+  - component: {fileID: 1181850953}
+  m_Layer: 0
+  m_Name: CrabSpawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1181850953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181850952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a210e8804e996d643b5617ba107b72e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 2447348663465409300, guid: 2fa36ee79ffa5ff489681df9fa48bf31, type: 3}
+  spawnAreaCenter: {x: -40.5, y: 2.89671, z: -49.9}
+  spawnAreaSize: {x: -11.4, y: 2.89671, z: 46.8}
+  spawnInterval: 3
+  crabLifetime: 10
+  speed: 0.05
+--- !u!4 &1181850954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181850952}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -48.3, y: 2.8967104, z: -49.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1597,4 +1647,5 @@ SceneRoots:
   - {fileID: 365535523}
   - {fileID: 211382318}
   - {fileID: 1080459824}
+  - {fileID: 1181850954}
   - {fileID: 555050626}
