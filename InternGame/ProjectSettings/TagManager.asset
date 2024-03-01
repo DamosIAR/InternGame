@@ -9,6 +9,8 @@ TagManager:
   - Spear
   - Storage
   - Ground
+  - FishBox
+  - Fish
   layers:
   - Default
   - TransparentFX

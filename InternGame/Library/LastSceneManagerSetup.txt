@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/CookGame.unity
+- path: Assets/Experiment/Scene/CookGame.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

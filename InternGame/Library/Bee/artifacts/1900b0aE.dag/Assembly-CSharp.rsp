@@ -368,6 +368,8 @@
 "Assets/Experiment/Script/ForLaptop/SpearSpawner.cs"
 "Assets/Experiment/Script/ForLaptop/Timer.cs"
 "Assets/Experiment/Script/ForMobile.cs"
+"Assets/Experiment/Script/ForMobile/Fish.cs"
+"Assets/Experiment/Script/ForMobile/NewTouch.cs"
 "Assets/Script/TouchManager.cs"
 -langversion:9.0
 
