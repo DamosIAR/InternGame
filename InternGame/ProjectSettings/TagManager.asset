@@ -11,6 +11,8 @@ TagManager:
   - Ground
   - FishBox
   - Fish
+  - ShrimpBox
+  - SquidBox
   layers:
   - Default
   - TransparentFX

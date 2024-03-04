@@ -7,10 +7,14 @@ public class TouchExample : MonoBehaviour
     [SerializeField] Camera mainCamera;
     [SerializeField] GameObject Fish;
     GameObject PickedFish;
-    [SerializeField] GameObject NotFish;
-    GameObject PickedObject;
     bool fishSpawned = false;
-    bool objectSpawned = false;
+    [SerializeField] GameObject Prawn;
+    GameObject PickedPrawn;
+    bool prawnSpawned = false;
+    [SerializeField] GameObject Squid;
+    GameObject PickedSquid;
+    bool squidSpawned = false;
+
     bool somethingPicked = false;
     void Update()
     {
@@ -25,9 +29,9 @@ public class TouchExample : MonoBehaviour
             {
                if ((hit.collider.tag == "FishBox" && fishSpawned == false) && somethingPicked == false)
                 {
-                    Vector3 fishSpawnedLocation = new Vector3(-1f, 0.5f , -9.5f);
+                    Vector3 fishSpawnedLocation = new Vector3(2.5f, 1f, -10f);
                     PickedFish = Instantiate(Fish, fishSpawnedLocation , Quaternion.identity);
-                    Debug.Log("spawn");
+                    Debug.Log("Fish spawn");
                     fishSpawned = true;
                     somethingPicked = true;
                     
@@ -36,23 +40,39 @@ public class TouchExample : MonoBehaviour
                 {
                     Destroy(PickedFish);
                     fishSpawned = false;
-                    Debug.Log("despawn");
+                    Debug.Log("Fish despawn");
                     somethingPicked= false;
                 }
 
-               if ((hit.collider.tag == "Storage" && objectSpawned == false) && somethingPicked == false)
+               if ((hit.collider.tag == "ShrimpBox" && prawnSpawned == false) && somethingPicked == false)
                 {
-                    Vector3 objectSpawnedLocation = new Vector3(0f, 0.5f, -9.5f);
-                    PickedObject = Instantiate(NotFish, objectSpawnedLocation, Quaternion.identity);
-                    objectSpawned = true;
-                    Debug.Log("Spawned");
+                    Vector3 PrawnSpawnedLocation = new Vector3(-2f, 1f, -10f);
+                    PickedPrawn = Instantiate(Prawn, PrawnSpawnedLocation, Quaternion.identity);
+                    prawnSpawned = true;
+                    Debug.Log("Prawn Spawned");
                     somethingPicked = true;
                 }
-               else if ((hit.collider.tag == "Storage" && objectSpawned == true) && somethingPicked == true)
+               else if ((hit.collider.tag == "ShrimpBox" && prawnSpawned == true) && somethingPicked == true)
                 {
-                    Destroy(PickedObject);
-                    objectSpawned = false;
-                    Debug.Log("despawn");
+                    Destroy(PickedPrawn);
+                    prawnSpawned = false;
+                    Debug.Log("Prawn despawn");
+                    somethingPicked = false;
+                }
+
+               if ((hit.collider.tag == "SquidBox" && squidSpawned == false) && somethingPicked == false )
+                {
+                    Vector3 squidSpawnedLocation = new Vector3(6.5f, 1f, -10f);
+                    PickedSquid = Instantiate(Squid, squidSpawnedLocation, Quaternion.identity);
+                    squidSpawned = true;
+                    Debug.Log("Squid Spawn");
+                    somethingPicked = true;
+                }
+               else if ((hit.collider.tag == "SquidBox" && squidSpawned == true) && somethingPicked == true)
+                {
+                    Destroy(PickedSquid);
+                    squidSpawned = false;
+                    Debug.Log("Squid despawn");
                     somethingPicked = false;
                 }
             }
