@@ -16,6 +16,7 @@ public class TouchExample : MonoBehaviour
     bool squidSpawned = false;
 
     bool somethingPicked = false;
+    GameObject Picked;
     void Update()
     {
 
@@ -34,11 +35,13 @@ public class TouchExample : MonoBehaviour
                     Debug.Log("Fish spawn");
                     fishSpawned = true;
                     somethingPicked = true;
+                    Picked = PickedFish;
+                    Debug.Log(Picked.ToString());
                     
                 }
                 else if ((hit.collider.tag == "FishBox" && fishSpawned == true) && somethingPicked == true)
                 {
-                    Destroy(PickedFish);
+                    Destroy(Picked);
                     fishSpawned = false;
                     Debug.Log("Fish despawn");
                     somethingPicked= false;
@@ -51,10 +54,12 @@ public class TouchExample : MonoBehaviour
                     prawnSpawned = true;
                     Debug.Log("Prawn Spawned");
                     somethingPicked = true;
+                    Picked = PickedPrawn;
+                    Debug.Log(Picked.ToString());
                 }
                else if ((hit.collider.tag == "ShrimpBox" && prawnSpawned == true) && somethingPicked == true)
                 {
-                    Destroy(PickedPrawn);
+                    Destroy(Picked);
                     prawnSpawned = false;
                     Debug.Log("Prawn despawn");
                     somethingPicked = false;
@@ -67,15 +72,27 @@ public class TouchExample : MonoBehaviour
                     squidSpawned = true;
                     Debug.Log("Squid Spawn");
                     somethingPicked = true;
+                    Picked = PickedSquid; 
+                    Debug.Log(Picked.ToString());
                 }
                else if ((hit.collider.tag == "SquidBox" && squidSpawned == true) && somethingPicked == true)
                 {
-                    Destroy(PickedSquid);
+                    Destroy(Picked);
                     squidSpawned = false;
                     Debug.Log("Squid despawn");
                     somethingPicked = false;
                 }
+
+
+               if (hit.collider.tag == "Grill" && somethingPicked == true)
+                {
+                    Debug.Log("Grill");
+                    Picked.transform.position = new Vector3(-6.3f, 0.7f, -11f);
+                    somethingPicked = false;
+                }
             }
+
+
 
         }
     }
