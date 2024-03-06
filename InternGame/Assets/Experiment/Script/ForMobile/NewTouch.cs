@@ -96,4 +96,12 @@ public class TouchExample : MonoBehaviour
 
         }
     }
+    
+    public void Spawned(GameObject gameobject, Vector3 location, Quaternion quaternion)
+    {
+        location = new Vector3();
+        Picked = Instantiate(gameObject, location, quaternion);
+
+    }
+
 }
