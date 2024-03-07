@@ -22,5 +22,15 @@ public class AnimationManager : MonoBehaviour
     {
         Debug.Log("Start");
         animator.SetBool("IsTrigger", true);
+        StartCoroutine(TriggerAfterWait(1f));
     }
+
+    IEnumerator TriggerAfterWait(float delayinseconds)
+    {
+        yield return new WaitForSeconds(delayinseconds);
+        animator.SetBool("IsTrigger", false);
+
+    }
+
+
 }
