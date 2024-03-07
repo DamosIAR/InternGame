@@ -7,10 +7,19 @@ using UnityEngine;
 public class SceneChanger : MonoBehaviour
 {
     public static SceneChanger instance;
+    [SerializeField] Animator transitionAnim;
 
     private void Awake()
     {
-        instance = this;
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
        
     public enum Scene
@@ -20,8 +29,16 @@ public class SceneChanger : MonoBehaviour
         CookGame
     }
 
-    public void LoadScene(string sceneName)
+    public void LoadScene()
     {
-        SceneManager.LoadScene(sceneName.ToString());
+        StartCoroutine(loadlevel());
+    }
+
+    IEnumerator loadlevel()
+    {
+        transitionAnim.SetBool("SceneChanging", true);
+        yield return new WaitForSeconds(0.3f);
+       SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex+1);
+        transitionAnim.SetBool("SceneChanging", false);
     }
 }

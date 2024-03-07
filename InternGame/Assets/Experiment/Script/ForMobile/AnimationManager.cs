@@ -22,7 +22,7 @@ public class AnimationManager : MonoBehaviour
     {
         Debug.Log("Start");
         animator.SetBool("IsTrigger", true);
-        StartCoroutine(TriggerAfterWait(1f));
+        StartCoroutine(TriggerAfterWait(0.5f));
     }
 
     IEnumerator TriggerAfterWait(float delayinseconds)

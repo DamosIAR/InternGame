@@ -28,7 +28,7 @@ public class MenuTouch : MonoBehaviour
                     Debug.Log(tag);
                     anim.startButton();
 
-                    sceneManager.LoadScene("CrabSpearing");
+                    sceneManager.LoadScene();
                 }
                 
             }
