@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1615543415}
-  maxTime: 10
+  maxTime: 30
   finishPanel: {fileID: 1439378417}
 --- !u!114 &220381265
 MonoBehaviour:

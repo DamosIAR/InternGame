@@ -15,6 +15,7 @@ TagManager:
   - SquidBox
   - Grill
   - Start
+  - Box
   layers:
   - Default
   - TransparentFX

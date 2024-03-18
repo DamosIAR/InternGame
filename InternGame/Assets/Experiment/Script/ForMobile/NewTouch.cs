@@ -2,15 +2,22 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 
-public class TouchExample : MonoBehaviour
+public class NewTouch : MonoBehaviour
 {
+    private Box box;
     [SerializeField] Camera mainCamera;
+
+    /*[SerializeField] private Transform CounterTopPoint;
+    [SerializeField] private Transform ObjectPicked;*/
+
     [SerializeField] GameObject Fish;
     GameObject PickedFish;
     bool fishSpawned = false;
+
     [SerializeField] GameObject Prawn;
     GameObject PickedPrawn;
     bool prawnSpawned = false;
+
     [SerializeField] GameObject Squid;
     GameObject PickedSquid;
     bool squidSpawned = false;
@@ -19,7 +26,7 @@ public class TouchExample : MonoBehaviour
     GameObject Picked;
     void Update()
     {
-
+        
 
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
@@ -28,6 +35,10 @@ public class TouchExample : MonoBehaviour
 
             if(Physics.Raycast(ray, out hit))
             {
+                Debug.Log(hit.transform);
+               box.interact();
+                
+                
                if ((hit.collider.tag == "FishBox" && fishSpawned == false) && somethingPicked == false)
                 {
                     Vector3 fishSpawnedLocation = new Vector3(2.5f, 1f, -10f);
@@ -90,6 +101,10 @@ public class TouchExample : MonoBehaviour
                     Picked.transform.position = new Vector3(-6.3f, 0.7f, -11f);
                     somethingPicked = false;
                 }
+            }
+            else
+            {
+                Debug.Log("-");
             }
 
 
